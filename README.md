@@ -57,6 +57,7 @@
 - Write SQL queries with Active Record to read and update
 - Add validations to all models
 - Add tests for all models
+- Add controllers, views and routes 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

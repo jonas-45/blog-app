@@ -53,6 +53,8 @@
 
 - Used database migration files to maintain database schema
 - Used Ruby Gems as a software packages system.
+- Set up associations between models.
+- Write SQL queries with Active Record to read and update
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,7 +124,7 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Create a data model.]**
+- [ ] **[Add authorization rules]**
 - [ ] **[Add validations and Model specs]**
 - [ ] **[Add forms]**
 

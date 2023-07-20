@@ -7,7 +7,6 @@ body {
   flex-flow: column;
   justify-content: center;
   margin: 100px 400px;
-  border: 1px #ddd solid;
 }
 
 .user-info {
@@ -52,4 +51,39 @@ body {
   padding-left: 60%;
   font-size: 1.2em;
   font-weight: 100;
+}
+
+.bio {
+  padding: 10px;
+  min-height: 150px;
+  border: 1px #333 solid;
+}
+
+.post {
+  padding: 10px;
+  margin: 3px 0;
+  min-height: 100px;
+  border: 1px #333 solid;
+}
+
+.comments-and-likes {
+  margin-left: 80%;
+}
+
+.see-all-post {
+  margin: 0 auto;
+  padding:10px 25px;
+}
+
+.comments {
+  margin: 0;
+  padding: 10px;
+}
+
+.comment {
+  list-style: none;
+}
+
+.post-detail {
+  margin-left: 80%;
 }

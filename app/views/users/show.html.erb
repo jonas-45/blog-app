@@ -1,1 +1,19 @@
-<h1>Here is the details for a particular user</h1>
+<main>
+  <section class="all-users">
+    <%= render "shared/single_user", user: @user %><br>
+    <p class="bio"><span>Bio</span><br><br><%= @user.bio %></p>
+    <div class="recent-post">
+      <% @recent_post.each_with_index do |post, index| %>
+        <p class="post">
+          <span>Post #<%= index + 1 %></span><br><br>
+          <span><%= post.text %></span><br><br>
+          <span class="comments-and-likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
+        </p>
+      <% end %>
+    </div>
+
+    <button class="see-all-post">
+        <%= link_to "See all post", user_posts_path(@user) %>
+    </button
+  </section>
+</main>

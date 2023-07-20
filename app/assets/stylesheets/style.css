@@ -1,0 +1,55 @@
+body {
+  background-color: #fff;
+}
+
+.all-users {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 100px 400px;
+  border: 1px #ddd solid;
+}
+
+.user-info {
+  display: flex;
+  gap: 30px
+}
+
+.user-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  width: 200px;
+  height: 150px;
+  border: 1px #333 solid;
+}
+
+.user-details{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  flex-grow: 1;
+  border: 1px #888 solid;
+}
+
+.name-posts {
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+}
+
+.username {
+  padding-left: 10%;
+  padding-top: 10%;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.post-counter {
+  padding-left: 60%;
+  font-size: 1.2em;
+  font-weight: 100;
+}

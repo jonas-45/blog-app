@@ -11,6 +11,9 @@
 /db/*.sqlite3
 /db/*.sqlite3-*
 
+# Ignore node modules.
+/node_modules
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*

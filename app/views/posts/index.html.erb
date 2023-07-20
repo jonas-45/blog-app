@@ -1,1 +1,19 @@
-<h1>Here is a list of all the post for a particular user</h1>
+<main>
+  <section class="all-users">
+    <%= render "shared/single_user", user: @user %>
+    <% @user_posts.each_with_index do |post, index| %>
+      <p class="post">
+        <span>Post #<%= index + 1 %></span><span class="post-detail"><%= link_to "View post", user_post_path(@user, post) %></span><br><br>
+        <span><%= post.text %></span><br><br>
+        <span class="comments-and-likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
+        <ul class="comments">
+          <% @post_comments.each do |comment| %>
+            <% if comment.post_id === post.id %>
+            <li class="comment"><%= comment.author.name %>: <%= comment.text %> </li>
+            <% end %>
+          <% end %>
+        </ul>
+      </p>
+    <% end %>
+  </section>
+</main>

@@ -7,7 +7,7 @@
         <span><%= post.text %></span><br><br>
         <span class="comments-and-likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
         <ul class="comments">
-          <% @post_comments.each do |comment| %>
+          <% post.five_recent_comments.each do |comment| %>
             <% if comment.post_id === post.id %>
             <li class="comment"><%= comment.author.name %>: <%= comment.text %> </li>
             <% end %>

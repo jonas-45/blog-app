@@ -87,3 +87,9 @@ body {
 .post-detail {
   margin-left: 80%;
 }
+
+.post-desc-heading {
+  display: flex;
+  justify-content: space-between;
+}
+

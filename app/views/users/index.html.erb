@@ -1,1 +1,8 @@
-<h1> Here is a list of all users </h1>
+<main>
+  <section class="all-users">
+    <% @all_users.each do |user| %>
+      <%= render "shared/single_user", user: user %>
+      <br>
+    <% end %>
+  </section>
+</main>

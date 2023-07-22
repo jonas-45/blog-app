@@ -8,8 +8,6 @@
         <div class="links">
           <%= link_to "View post", user_post_path(@user, post)%>
           <%= link_to "Add Comment", new_user_post_comment_path(author_id: @user, post_id: post) %>
-          <span class="separator"> | </span>
-          <%= link_to "Add a like", new_user_post_like_path(user_id: @user, post_id: post.id) %>
         </div>
       </div>
 

@@ -2,18 +2,35 @@
   <section class="all-users">
     <%= render "shared/single_user", user: @user %>
     <% @user_posts.each_with_index do |post, index| %>
-      <p class="post">
-        <span>Post #<%= index + 1 %></span><span class="post-detail"><%= link_to "View post", user_post_path(@user, post) %></span><br><br>
+      <div class="post">
+      <div class="post-top">
+        <h4><span>Post #<%= index + 1 %></span></h4>
+        <div class="links">
+          <%= link_to "View post", user_post_path(@user, post)%>
+          <%= link_to "Add Comment", new_user_post_comment_path(author_id: @user, post_id: post) %>
+          <span class="separator"> | </span>
+          <%= link_to "Add a like", new_user_post_like_path(user_id: @user, post_id: post.id) %>
+        </div>
+      </div>
+
         <span><%= post.text %></span><br><br>
         <span class="comments-and-likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
-        <ul class="comments">
-          <% post.five_recent_comments.each do |comment| %>
-            <% if comment.post_id === post.id %>
-            <li class="comment"><%= comment.author.name %>: <%= comment.text %> </li>
+        <ul class="comments"> 
+          <% if post.five_recent_comments.empty? %>
+            <span>No comments available for this post </span>
+          <%else%>
+            <% post.five_recent_comments.each do |comment| %>
+              <li class="comment"><%= comment.author.name %>: <%= comment.text %> </li>
             <% end %>
-          <% end %>
+          <%end%>
         </ul>
-      </p>
+      </div>
     <% end %>
+
+    <div class="post-buttoms">
+      <button class="add-post">
+        <%= link_to "Add Post", new_user_post_path(@user) %>
+      </button
+    </div>
   </section>
 </main>

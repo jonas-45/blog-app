@@ -69,7 +69,8 @@ body {
   margin-left: 80%;
 }
 
-.see-all-post,.add-post {
+.see-all-post,
+.add-post {
   margin: 0 auto;
   padding: 10px 25px;
 }

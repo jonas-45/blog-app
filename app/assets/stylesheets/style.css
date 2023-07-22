@@ -62,7 +62,6 @@ body {
 .post {
   padding: 10px;
   margin: 3px 0;
-  min-height: 100px;
   border: 1px #333 solid;
 }
 
@@ -70,14 +69,15 @@ body {
   margin-left: 80%;
 }
 
-.see-all-post {
+.see-all-post,.add-post {
   margin: 0 auto;
   padding: 10px 25px;
 }
 
 .comments {
-  margin: 0;
+  margin: 7px 0;
   padding: 10px;
+  border-top: 1px #888 solid;
 }
 
 .comment {
@@ -91,4 +91,30 @@ body {
 .post-desc-heading {
   display: flex;
   justify-content: space-between;
+}
+
+.post-buttoms {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links > *:nth-child(1) {
+  margin-right: 50px;
+}
+
+.separator {
+  margin: 0 8px;
 }

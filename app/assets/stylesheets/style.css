@@ -119,3 +119,10 @@ body {
 .separator {
   margin: 0 8px;
 }
+
+.bottom {
+  display: flex;
+  justify-content: end;
+  padding: 0% 2%;
+  margin-bottom: 1%;
+}

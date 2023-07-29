@@ -35,6 +35,7 @@ class CommentsController < ApplicationController
       flash[:danger] = 'Comment not deleted!'
     end
   end
+
   private
 
   def comment_params

@@ -24,6 +24,12 @@ body {
   border: 1px #333 solid;
 }
 
+.profile-image {
+  width: 200px;
+  height: 150px;
+  border: 1px #333 solid;
+}
+
 .user-details {
   display: flex;
   flex-flow: column nowrap;

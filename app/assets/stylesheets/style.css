@@ -89,6 +89,8 @@ body {
 
 .comment {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .post-detail {

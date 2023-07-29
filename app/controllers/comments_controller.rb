@@ -1,4 +1,10 @@
 class CommentsController < ApplicationController
+  before_action :find_comment, only: [:destroy]
+
+  def find_comment
+    @comment = Comment.find(params[:id])
+  end
+
   def new
     @comment = Comment.new
   end
@@ -14,6 +20,19 @@ class CommentsController < ApplicationController
     else
       flash[:alert] = "Couln't add Comment!"
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @post = Post.find(params[:post_id])
+
+    # @comment = current_user.comments.find_by(id: params[:id])
+    if @comment&.destroy
+      flash[:success] = 'Comment deleted!'
+      @comment.post.decrement!(:comments_counter) # Decrease the comments count by 1 for the post
+    else
+      flash[:danger] = 'Comment not deleted!'
     end
   end
 

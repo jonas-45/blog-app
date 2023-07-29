@@ -75,4 +75,5 @@ end
 gem 'dotenv-rails', groups: %i[development test]
 gem 'rails-controller-testing'
 
+gem 'cancancan'
 gem 'devise', '~> 4.9'

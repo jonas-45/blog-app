@@ -17,6 +17,10 @@
   </div>
 
   <div class="bottom">
-        <%= render 'shared/like', like: @like %>
-    </div>
+      <%= render 'shared/like', like: @like %>
+      <% if can? :destroy, @post %>
+        <%= button_to "Delete Post", user_post_path(user_id: @post.author_id, id: @post.id), method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
+      <% end %>
+
+  </div>
 </section>

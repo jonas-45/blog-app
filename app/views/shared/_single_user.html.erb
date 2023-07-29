@@ -10,5 +10,7 @@
       <p class="name-posts"><span class="username"><%= link_to user.name, user_path(user.id) %></span> <br>
         <span class='post-counter'>Number of posts: <%= user.post_counter %></span>
         </p>
+
+        <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: "submit-button" %>
     </div>
 </div>

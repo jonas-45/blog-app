@@ -18,7 +18,12 @@
             <span>No comments available for this post </span>
           <%else%>
             <% post.five_recent_comments.each do |comment| %>
-              <li class="comment"><%= comment.author.name %>: <%= comment.text %> </li>
+              <li class="comment">
+                <%= comment.author.name %>: <%= comment.text %>
+                <% if can? :destroy, comment %>
+                  <%= button_to 'Delete comment', delete_comment_path(post_id: post.id, id: comment.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+                <% end %> 
+              </li>
             <% end %>
           <%end%>
         </ul>

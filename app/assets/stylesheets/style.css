@@ -158,11 +158,6 @@ body {
   margin-bottom: 30px;
 }
 
-.links {
-  display: flex;
-  justify-content: space-between;
-}
-
 .add_like {
   display: flex;
   gap: 10px;

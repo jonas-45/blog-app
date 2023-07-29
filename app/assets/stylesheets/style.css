@@ -24,6 +24,12 @@ body {
   border: 1px #333 solid;
 }
 
+.profile-image {
+  width: 200px;
+  height: 150px;
+  border: 1px #333 solid;
+}
+
 .user-details {
   display: flex;
   flex-flow: column nowrap;
@@ -125,4 +131,40 @@ body {
   justify-content: end;
   padding: 0% 2%;
   margin-bottom: 1%;
+}
+
+.form-container {
+  display: flex;
+  border: 4px solid #000;
+  flex-direction: column;
+  height: 500px;
+  width: 500px;
+  align-items: center;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.form_msg {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.form_title {
+  height: 30px;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.add_like {
+  display: flex;
+  gap: 10px;
+}
+
+.new-post {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
